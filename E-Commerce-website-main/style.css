@@ -1,0 +1,571 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* html {
+    scroll-behavior: smooth;
+} */
+
+
+
+section {
+    max-width:100%;
+    height:100vh;
+    background-image: url(img2.png);
+
+    
+    background-size:50%; 
+    background-position:right;
+    background-repeat: no-repeat;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusted for logo and menu spacing */
+    padding: 15px 30px; /* Added padding to make the nav items spaced properly */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); /* Fixed the shadow opacity */
+    background-color: white; /* Set a background color for the navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 35px;
+    color: red;
+    margin-left: 15px; /* Adjusted margin */
+    cursor: pointer;
+}
+
+ul li:hover i{
+    color: red ;
+}
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Spacing between navigation links */
+}
+
+ul li a 
+{
+    text-decoration: none;
+    color: blueviolet;
+    font-size: 18px;
+}
+ul li a:hover{
+    font-size: 20px;
+    color: red;
+}
+
+.icon:hover i
+{
+ color: brown;
+}
+.icon 
+{
+    display: flex;
+    gap: 15px; /* Spacing between the icons */
+}
+
+.icon i 
+{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logo 
+{
+    color: blueviolet;
+    text-decoration: underline;
+}
+img 
+{
+    width:110%; /* Adjust the percentage as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 470px; /* Optional: Set a maximum width */
+}
+.main_text
+{
+    /* position: absolute; */
+    margin-top:70px;
+    font-size: 40px;
+    line-height:50px;
+    background: linear-gradient(to right,red,purple);
+   
+
+    /* background-color: cadetblue; */
+    color:blueviolet;
+
+}
+.main_image p
+{
+   margin-top:8px;
+  
+}
+
+.social_icon
+{
+    position: absolute;
+    top: 70%;
+    left: 98%;
+    font-size:23px;
+    /* display: flex; */
+    gap: 5px;
+
+}
+.social_icon i:hover
+{
+  color: brown;
+  cursor: pointer;
+
+}
+
+.button
+{
+    background: linear-gradient(to right,red,purple);
+    border-radius: 30px solid black;
+    position: absolute;
+    padding: 10px 30px;
+    margin-left: 40px;
+    padding-bottom: 10px;
+    align-items: center;
+    color: aliceblue;
+    text-decoration: dashed;
+}
+
+.button a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+/* Products Section */
+.pro {
+    width: 100%;
+    padding: 25px 0;
+    overflow: hidden; /* Ensures no overflow issues */
+}
+
+/* Center and Style the Products Title */
+.pro h1 {
+    margin: 35px auto;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(to right, red, purple);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+/* Flex Layout for Products - Centered */
+.box {
+    width: 90%;
+    margin: 0 auto;
+    display: flex; /* Change to flexbox */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items:center;
+    gap:15px; /* Adds some spacing between products */
+}
+
+/* Card (Product) Styling */
+.card {
+    background-color: #f8f8f8;
+    border: 2px solid purple; /* Purple border */
+    border-radius: 5px; /* Border radius of 5px */
+    padding: 20px;
+    /* display: flex; */
+    text-align: center;
+    width: 30%; /* Each card takes up about 30% of the row */
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+.small_card:hover
+{
+  color: brown;
+  transform: scale(2.05);
+}
+
+.card:hover {
+    transform: scale(1.05); /* Subtle hover effect */
+}
+
+/* Image Styling */
+.image {
+    width: 100%; /* Make the image container responsive */
+    height: auto;
+    margin: 0 auto;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Add 5px radius to the image */
+}
+
+/* Product Information Styling */
+.Product_text {
+    margin-top: 15px;
+}
+
+.Product_text h2 {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.Product_text p {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.Product_text h3 {
+    font-size: 20px;
+    color: darkgreen;
+    margin-bottom: 10px;
+}
+
+.product_star {
+    color: gold;
+    display: flex;
+    justify-content: center;
+}
+
+.product_star i {
+    margin-right: 5px;
+}
+.product_star a
+{
+  font-size: large;
+  color: aqua;
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    .card {
+        width: 45%; /* Two cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 100%; /* One card per row on very small screens */
+    }
+}
+
+
+/* ABOUT */
+
+.about
+{
+    width: 100%;
+    height: 100vh;
+    padding: 30 0;
+}
+.about h1
+{
+    font-size: 60px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:black;
+    /* -webkit-background-clip:text; */
+    -webkit-text-fill-color:transparent;
+    text-transform:uppercase;
+}
+
+.about h1 span{
+    background:linear-gradient(to right);
+    color: brown;
+     font-style: oblique;
+     margin-left: 100px;
+    /* background-color: blueviolet; */
+}
+
+.about_main{
+    position: relative;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.about_smallimage{
+    display: flex;
+    margin-top:80px;
+
+}
+
+.about_smallimage
+{
+    height: 336px;
+    width: 99%;
+
+}
+
+.image_conatineer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Adds a gap of 20px between the images */
+}
+
+.image_conatineer img {
+    margin-top:50px;
+    width:350px;
+    height: auto;
+    margin-right: 10px; /* Adds a margin to the right of the first image */
+}
+
+.content {
+    max-width: 600px;
+    margin-top: 20px;
+}
+.me
+{
+   font-size: xx-large;
+    margin-left:500px;
+    background: linear-gradient(to right,red,purple);
+}
+
+/* review  */
+
+
+
+.review {
+    width: 100%;
+    height: 100vh;
+    padding-top: 500px;
+   
+}
+
+.review h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, red, purple);
+    font-style: inherit;
+    text-transform: uppercase;
+    font-size: xx-large;
+    color: white;
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.profile_img {
+    margin-right: 15px; /* Adds space between image and text */
+}
+
+.profile_img img {
+    width: 150px; /* Smaller profile image */
+    height: 150px;
+    border-radius: 50%; /* Circular image */
+}
+
+.card_top {
+    width: 250px;
+    height: auto;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* display: flex;
+    align-items: center;
+    justify-items: center; */
+}
+
+.class_name {
+    font-size: 15px; /* Increase font size for better visibility */
+    font-weight: bold;
+}
+
+.like {
+    color: gold;
+    margin-top: 5px;
+}
+
+
+
+/* service */
+.service
+{
+    width: 100%;
+    height:85vh;
+    padding-top:300px;
+
+}
+
+.service h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, red, purple);
+    font-style: inherit;
+    text-transform: uppercase;
+    font-size: xx-large;
+    color: white;
+    
+}
+.service_box
+{
+    width: 250px;
+    height: auto;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+.service_box i{
+    width:20px;
+    height:20px;
+    color: goldenrod;
+}
+
+
+
+
+
+/* fotter  */
+/* General styles for the footer */
+footer {
+    background-color: #808080; /* Grey color for the background */
+    padding: 40px 0;
+    color: black; /* Text color */
+    font-family: Arial, sans-serif;
+}
+
+/* Styling the container for footer content */
+.footer_main {
+    display: flex;
+    justify-content: space-between; /* Space between the sections */
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* Ensures it wraps on smaller screens */
+}
+
+/* Styling individual sections inside the footer */
+.tag {
+    flex: 1;
+    padding: 0 20px;
+    min-width: 200px;
+    text-align: left; /* Aligns text to the left */
+}
+
+/* Styling the headings inside the footer */
+.tag h1 {
+    font-size:25px;
+    margin-bottom: 20px;
+    color:black;
+}
+
+/* Styling the links inside the footer */
+.tag a {
+    display: block;
+    color:black;
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+.tag a:hover {
+    text-decoration: underline;
+}
+
+/* Input fields and button styles for newsletter */
+.tag input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.tag button[type="sumbit"] {
+    padding: 10px 20px;
+    background-color: white;
+    color: grey;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tag button[type="sumbit"]:hover {
+    background-color: #d3d3d3; /* Slightly lighter grey on hover */
+}
+
+/* Adjusting icon styling */
+.tag i {
+    margin-right: 10px;
+    color:black;
+    font-size: 16px;
+}
+
+/* Ensuring that the sections are horizontally spaced with gaps */
+.footer_main .tag {
+    margin-right: 20px; /* Adds spacing between the sections */
+}
+
+/* Responsive design: stack elements vertically on smaller screens */
+@media (max-width: 768px) {
+    .footer_main {
+        flex-direction: column;
+    }
+
+    .footer_main .tag {
+        margin-bottom: 20px; /* Adds spacing between stacked sections */
+    }
+}
+
+
+/* Video CSS */
+
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* The container will take 100% of the viewport width and 80% of the height */
+.video-container {
+    width: 100%;
+    height: 80vh; /* 80% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: ; Optional: background color for contrast */
+}
+
+/* The video will be responsive and centered */
+.responsive-video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Ensures the video scales without distortion */
+}
